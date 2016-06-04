@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bqplot-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/bqplot-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bqplot-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bqplot-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bqplot-feedstock/branch/master)
