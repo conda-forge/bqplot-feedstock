@@ -1,1 +1,1 @@
-"%PREFIX%\Scripts\jupyter-nbextension.exe" disable bqplot --py --sys-prefix && if errorlevel 1 exit 1
+"%PREFIX%\Scripts\jupyter-nbextension.exe" disable bqplot --py --sys-prefix > NUL 2>&1 && if errorlevel 1 exit 1
