@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
     name: bqplot
@@ -7,11 +7,10 @@ package:
 source:
     fn: bqplot-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
-    md5: 5660695de70d6162ea279ebe3e6034a5
+    md5: ace79bb27777ca1fa51e5dac0c57d034
 
 build:
-    number: 2
-    skip: true  # [win64 and py34]
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -22,7 +21,7 @@ requirements:
     run:
         - python
         - ipywidgets >=5.2.2
-        - numpy
+        - numpy >=1.10.4
         - pandas
         # Pinning pyzmq because the current conda-forge pyzmq package does
         # not work with win+py35
