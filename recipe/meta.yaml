@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
     name: bqplot
@@ -7,7 +7,7 @@ package:
 source:
     fn: bqplot-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
-    md5: ace79bb27777ca1fa51e5dac0c57d034
+    md5: 31db0775a8b85add04262632c30ddb4d
 
 build:
     number: 0
