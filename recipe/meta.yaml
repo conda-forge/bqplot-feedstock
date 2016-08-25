@@ -10,7 +10,7 @@ source:
     md5: 17ab8e10bb36b95b192ea1848215efc9
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -23,9 +23,6 @@ requirements:
         - ipywidgets >=5.2.2
         - numpy >=1.10.4
         - pandas
-        # Pinning pyzmq because the current conda-forge pyzmq package does
-        # not work with win+py35
-        - pyzmq >=15.2.0
 
 test:
     imports:
