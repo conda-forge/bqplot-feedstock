@@ -1,4 +1,5 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.4" %}
+{% set sha256 = "a0a79d08269b0805330ad192234206452504db87ceeeacdbfafed8c5e4c8e6e9" %}
 
 package:
     name: bqplot
@@ -7,10 +8,10 @@ package:
 source:
     fn: bqplot-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
-    md5: 17ab8e10bb36b95b192ea1848215efc9
+    sha256: {{ sha256  }}
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -21,6 +22,8 @@ requirements:
     run:
         - python
         - ipywidgets >=5.2.2
+        - traitlets >=4.3.0
+        - traittypes >=0.0.6
         - numpy >=1.10.4
         - pandas
 
