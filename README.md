@@ -11,6 +11,18 @@ Summary: Plotting library for Jupyter
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bqplot-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/bqplot-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bqplot-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bqplot-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bqplot-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/version.svg)](https://anaconda.org/conda-forge/bqplot)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/downloads.svg)](https://anaconda.org/conda-forge/bqplot)
+
 Installing bqplot
 =================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `bqplot` available on your platfor
 ```
 conda search bqplot --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bqplot-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/bqplot-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bqplot-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bqplot-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bqplot-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/version.svg)](https://anaconda.org/conda-forge/bqplot)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/downloads.svg)](https://anaconda.org/conda-forge/bqplot)
 
 
 Updating bqplot-feedstock
