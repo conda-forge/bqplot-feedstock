@@ -33,7 +33,7 @@ test:
 
 about:
     home: https://github.com/bloomberg/bqplot
-    license: Apache License 2.0
+    license: Apache 2.0
     summary: Plotting library for Jupyter
 
 extra:
