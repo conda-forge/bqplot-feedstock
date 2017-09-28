@@ -1,5 +1,5 @@
-{% set version = "0.9.0" %}
-{% set sha256 = "3cfb480f31d757d2133676fffcade83230062052eba55421087af867fe044e8f" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "e64c01c8d4f916c1d82706a7ecd0bdeffec179cfdbcbe05ef28ffbb814fab9d6" %}
 
 package:
     name: bqplot
@@ -11,7 +11,7 @@ source:
     sha256: {{ sha256  }}
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
         - jupyter
     run:
         - python
-        - ipywidgets >=6.0.0,<7.0
+        - ipywidgets >=7.0.0,<8.0
         - traitlets >=4.3.0,<5.0
         - traittypes >=0.0.6
         - numpy >=1.10.4
