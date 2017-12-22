@@ -1,5 +1,5 @@
-{% set version = "0.10.1" %}
-{% set sha256 = "974f05cc9e9fa5df87825bf72af07e76a5f93aa6a0fc3f74adb979756573cc8b" %}
+{% set version = "0.10.2" %}
+{% set sha256 = "1e5b49cd1446ce2846b99354924ac71513210bb07c87f862fe83d17d290adc25" %}
 
 package:
     name: bqplot
@@ -40,3 +40,4 @@ extra:
   recipe-maintainers:
     - SylvainCorlay
     - jasongrout
+    - rmenegaux
