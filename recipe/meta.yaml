@@ -1,5 +1,5 @@
-{% set version = "0.10.5" %}
-{% set sha256 = "32cad266a850665582bd8089c63e8731c505fff138a0e83cf0b2dd1b753d1d2a" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "d6318df38f8dae4e33a7f571d8b3c8fb651784c35fdd6542ca0070299949d791" %}
 
 package:
     name: bqplot
@@ -12,13 +12,14 @@ source:
 
 build:
     number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-    build:
+    host:
         - python
         - setuptools
         - jupyter
+        - pip
     run:
         - python
         - ipywidgets >=7.0.0,<8.0

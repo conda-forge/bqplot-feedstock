@@ -14,14 +14,16 @@ Summary: Plotting library for Jupyter
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bqplot-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/bqplot-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bqplot-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bqplot-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bqplot-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/bqplot-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/bqplot-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/bqplot-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/bqplot-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/bqplot-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/version.svg)](https://anaconda.org/conda-forge/bqplot)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bqplot/badges/downloads.svg)](https://anaconda.org/conda-forge/bqplot)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bqplot-green.svg)](https://anaconda.org/conda-forge/bqplot) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bqplot.svg)](https://anaconda.org/conda-forge/bqplot) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bqplot.svg)](https://anaconda.org/conda-forge/bqplot) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bqplot.svg)](https://anaconda.org/conda-forge/bqplot) |
 
 Installing bqplot
 =================
