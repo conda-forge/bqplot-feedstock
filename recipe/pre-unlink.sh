@@ -1,1 +1,1 @@
-"${PREFIX}/bin/jupyter-nbextension" disable bqplot --py --sys-prefix >> "${PREFIX}/.messages.txt" 2>&1
+"${PREFIX}/bin/jupyter-nbextension" uninstall bqplot --py --sys-prefix >> "${PREFIX}/.messages.txt" 2>&1
