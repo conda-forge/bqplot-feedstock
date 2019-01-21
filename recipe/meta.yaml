@@ -11,8 +11,9 @@ source:
     sha256: {{ sha256  }}
 
 build:
-    number: 0
+    number: 1
     script: python -m pip install --no-deps --ignore-installed .
+    noarch: python
 
 requirements:
     host:
@@ -35,7 +36,11 @@ test:
 about:
     home: https://github.com/bloomberg/bqplot
     license: Apache 2.0
+    license_family: Apache
     summary: Plotting library for Jupyter
+    description: Plotting library for Jupyter
+    doc_url: https://bqplot.readthedocs.io
+    dev_url: https://github.com/bloomberg/bqplot
 
 extra:
   recipe-maintainers:
