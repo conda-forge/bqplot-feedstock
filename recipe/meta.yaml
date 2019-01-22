@@ -1,5 +1,5 @@
-{% set version = "0.11.4" %}
-{% set sha256 = "af950500fddf857d1b93d25cb4402352212d3439b0e6fc2ea5412dcc67aae083" %}
+{% set version = "0.11.5" %}
+{% set sha256 = "2a918fc9a2296e46f708016b98ce6d2978483a13c89373ede991a8419d236e86" %}
 
 package:
     name: bqplot
@@ -13,6 +13,7 @@ source:
 build:
     number: 0
     script: python -m pip install --no-deps --ignore-installed .
+    noarch: python
 
 requirements:
     host:
@@ -35,7 +36,11 @@ test:
 about:
     home: https://github.com/bloomberg/bqplot
     license: Apache 2.0
+    license_family: Apache
     summary: Plotting library for Jupyter
+    description: Plotting library for Jupyter
+    doc_url: https://bqplot.readthedocs.io
+    dev_url: https://github.com/bloomberg/bqplot
 
 extra:
   recipe-maintainers:
