@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About bqplot
 ============
 
@@ -13,13 +9,20 @@ Feedstock license: BSD 3-Clause
 
 Summary: Plotting library for Jupyter
 
-
+Plotting library for Jupyter
 
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/bqplot-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/bqplot-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3754&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bqplot-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
