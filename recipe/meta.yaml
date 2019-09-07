@@ -36,6 +36,7 @@ test:
 about:
     home: https://github.com/bloomberg/bqplot
     license: Apache 2.0
+    license_file: LICENSE
     license_family: Apache
     summary: Plotting library for Jupyter
     description: Plotting library for Jupyter
