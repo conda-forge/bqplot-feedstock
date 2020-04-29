@@ -1,5 +1,5 @@
-{% set version = "0.12.6" %}
-{% set sha256 = "933f17b411491e535d58643c0ec96b3dd9f7fa1bd2f943388ccbcd56706a6c70" %}
+{% set version = "0.12.7" %}
+{% set sha256 = "4712e979f7e3a5ead18f6ce1a6e364d7131a3a9951ffa4870fad1b19ce1c23b1" %}
 
 package:
   name: bqplot
@@ -8,7 +8,7 @@ package:
 source:
   fn: bqplot-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
-  sha256: {{ sha256  }}
+  sha256: {{ sha256 }}
 
 build:
   number: 0
