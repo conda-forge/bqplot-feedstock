@@ -1,5 +1,5 @@
-{% set version = "0.12.15" %}
-{% set sha256 = "955bd5716fc4f0bf7a0893b837836bffcf4e4776b31c33dd79f97fc53120c4a0" %}
+{% set version = "0.12.16" %}
+{% set sha256 = "b3ea0a6a54211389c198d7c256e9bef56b47a227818631469ba6b95311e53303" %}
 
 package:
   name: bqplot
