@@ -1,5 +1,5 @@
-{% set version = "0.12.18" %}
-{% set sha256 = "50741616b60af3936df988b8da84a5862035cb00c453bfd6959d1846bff3b255" %}
+{% set version = "0.12.20" %}
+{% set sha256 = "2ebc2ab23f93a580741d4f04c754d5b6ca289b0accaa7ba3e07b7b27392dffb1" %}
 
 package:
   name: bqplot
@@ -17,14 +17,15 @@ build:
 
 requirements:
   host:
-    - python
+    - python  >=3.6
     - setuptools
     - jupyter
+    - jupyter-packaging >=0.7.9
     - pip
   run:
-    - python
+    - python  >=3.6
     - ipywidgets >=7.5.0,<8.0
-    - traitlets >=4.3.0,<5.0
+    - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
     - numpy >=1.10.4
     - pandas
@@ -32,6 +33,13 @@ requirements:
 test:
   imports:
     - bqplot
+  commands:
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                                       # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                                           # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                                      # [unix]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js (exit 0) else (exit 1)           # [win]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js (exit 0) else (exit 1)               # [win]
+    - if exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json (exit 0) else (exit 1)          # [win]
 
 about:
   home: https://github.com/bloomberg/bqplot
