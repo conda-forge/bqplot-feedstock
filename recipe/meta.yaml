@@ -20,7 +20,7 @@ requirements:
     - python  >=3.6
     - setuptools
     - jupyter
-    - jupyter-packaging
+    - jupyter-packaging >=0.7.9
     - pip
   run:
     - python  >=3.6
