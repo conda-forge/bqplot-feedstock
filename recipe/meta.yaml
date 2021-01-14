@@ -1,5 +1,5 @@
-{% set version = "0.12.20" %}
-{% set sha256 = "2ebc2ab23f93a580741d4f04c754d5b6ca289b0accaa7ba3e07b7b27392dffb1" %}
+{% set version = "0.12.21" %}
+{% set sha256 = "a9553275616a2749788931f2b1084d3667a1bb6db77c7214f08ed4e546209e49" %}
 
 package:
   name: bqplot
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
