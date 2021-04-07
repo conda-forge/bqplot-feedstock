@@ -34,12 +34,12 @@ test:
   imports:
     - bqplot
   commands:
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                                       # [unix]
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                                           # [unix]
-    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                                      # [unix]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js (exit 0) else (exit 1)           # [win]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js (exit 0) else (exit 1)               # [win]
-    - if exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json (exit 0) else (exit 1)          # [win]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                           # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                               # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                          # [unix]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js exit 1           # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js exit 1               # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json exit 1          # [win]
 
 about:
   home: https://github.com/bloomberg/bqplot
