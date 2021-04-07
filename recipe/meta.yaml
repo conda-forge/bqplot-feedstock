@@ -1,5 +1,5 @@
-{% set version = "0.12.23" %}
-{% set sha256 = "cf00f50427ea781070f893bc9d8548c4239b19f1cc88fa689c9c89b0b24dde57" %}
+{% set version = "0.12.24" %}
+{% set sha256 = "4c08469bb28970c358d36761072cedeffbbeef4cb9a9f2a69f0e0fc790c5c1b6" %}
 
 package:
   name: bqplot
@@ -34,12 +34,12 @@ test:
   imports:
     - bqplot
   commands:
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                                       # [unix]
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                                           # [unix]
-    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                                      # [unix]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js (exit 0) else (exit 1)           # [win]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js (exit 0) else (exit 1)               # [win]
-    - if exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json (exit 0) else (exit 1)          # [win]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                           # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                               # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                          # [unix]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js exit 1           # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js exit 1               # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json exit 1          # [win]
 
 about:
   home: https://github.com/bloomberg/bqplot
