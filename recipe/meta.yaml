@@ -1,45 +1,48 @@
 {% set version = "0.12.33" %}
-{% set sha256 = "a37f94752f01e75dd431c2f62c7849c28ad7020105121852816d2903d8b92c3e" %}
 
 package:
   name: bqplot
   version: {{ version }}
 
 source:
-  fn: bqplot-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: a37f94752f01e75dd431c2f62c7849c28ad7020105121852816d2903d8b92c3e
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  script:
+    - {{ PYTHON }} -c '__import__("shutil").rmtree("tests")'
+    - {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python  >=3.6
-    - setuptools
-    - jupyter
-    - jupyter-packaging >=0.7.9
+    - jupyter-packaging >=0.7.9,<0.8.0
     - pip
+    - python >=3.6
   run:
-    - python  >=3.6
     - ipywidgets >=7.6.0,<8.0
-    - traitlets >=4.3.0,<6.0
-    - traittypes >=0.0.6
     - numpy >=1.10.4
     - pandas
+    - python >=3.6
+    - traitlets >=4.3.0,<6.0
+    - traittypes >=0.0.6
 
 test:
+  requires:
+    - jupyterlab >=3,<4
+    - m2-grep  # [win]
+    - pip
   imports:
     - bqplot
   commands:
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js                           # [unix]
-    - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js                               # [unix]
-    - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json                          # [unix]
-    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js exit 1           # [win]
-    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js exit 1               # [win]
-    - if not exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json exit 1          # [win]
+    - pip check
+    - jupyter labextension list
+    - jupyter labextension list 1>labextensions 2>&1
+    - grep -iE "bqplot.*OK" labextensions
+    - jupyter nbextension list
+    - jupyter nbextension list 1>nbextensions 2>&1
+    - grep -iE "bqplot.*enabled" nbextensions
 
 about:
   home: https://github.com/bloomberg/bqplot
