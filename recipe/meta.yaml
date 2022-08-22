@@ -1,5 +1,5 @@
-{% set version = "0.12.33" %}
-{% set sha256 = "a37f94752f01e75dd431c2f62c7849c28ad7020105121852816d2903d8b92c3e" %}
+{% set version = "0.12.34" %}
+{% set sha256 = "74091e59f3bb5d3b4b119c84684de319afbebec0833b499af10cc511f33b5205" %}
 
 package:
   name: bqplot
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python  >=3.6
-    - ipywidgets >=7.6.0,<8.0
+    - ipywidgets >=7.6.0,<9
     - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
     - numpy >=1.10.4
