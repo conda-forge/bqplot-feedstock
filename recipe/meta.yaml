@@ -7,23 +7,23 @@ package:
 
 source:
   fn: bqplot-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/b/bqplot/bqplot-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python  >=3.6
+    - python {{ python_min }}
     - setuptools
     - jupyter
     - jupyter-packaging >=0.7.9
     - pip
   run:
-    - python  >=3.6
+    - python >={{ python_min }}
     - ipywidgets >=7.6.0,<9
     - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
@@ -33,6 +33,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - bqplot
   commands:
