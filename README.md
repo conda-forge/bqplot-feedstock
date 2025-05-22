@@ -11,7 +11,7 @@ Summary: Plotting library for Jupyter
 
 Development: https://github.com/bloomberg/bqplot
 
-Documentation: https://bqplot.readthedocs.io
+Documentation: https://bqplot.readthedocs.io/
 
 Plotting library for Jupyter
 

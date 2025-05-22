@@ -54,6 +54,8 @@ tests:
           - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js exit 1
           - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js exit 1
           - if not exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json exit 1
+      - jupyter labextension list
+      - jupyter labextension list | python -c "import sys, re; assert re.match('bqlot.*OK', sys.stdin.read())"
 
 about:
   license: Apache-2.0
