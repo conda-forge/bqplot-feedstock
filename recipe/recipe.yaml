@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 0.12.45
+
+package:
+  name: bqplot
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/b/bqplot/bqplot-${{ version }}.tar.gz
+  sha256: ede00e9fdf7d92e43cc2d1b9691c7da176b6216fdd187c8e92f19d7beaca5e2a
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - jupyter
+    - jupyter-packaging >=0.7.9
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - ipywidgets >=7.6.0,<9
+    - numpy >=1.10.4
+    - pandas >=1.0.0,<3.0.0
+    - python >=${{ python_min }}
+    - traitlets >=4.3.0,<6.0
+    - traittypes >=0.0.6
+
+tests:
+  - python:
+      imports: bqplot
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - if: unix
+        then:
+          - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/extension.js
+          - test -f ${PREFIX}/share/jupyter/nbextensions/bqplot/index.js
+          - test -f ${PREFIX}/share/jupyter/labextensions/bqplot/package.json
+        else:
+          - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\extension.js exit 1
+          - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\bqplot\\index.js exit 1
+          - if not exist %PREFIX%\\share\\jupyter\\labextensions\\bqplot\\package.json exit 1
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Plotting library for Jupyter
+  description: Plotting library for Jupyter
+  homepage: https://github.com/bloomberg/bqplot
+  repository: https://github.com/bloomberg/bqplot
+  documentation: https://bqplot.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - jasongrout
+    - rmenegaux
+    - ChakriCherukuri
+    - ibdafna
+    - martinRenou
+    - kaiayoung
