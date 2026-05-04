@@ -28,7 +28,7 @@ requirements:
   run:
     - ipywidgets >=7.6.0,<9
     - numpy >=1.10.4
-    - pandas >=1.0.0,<3.0.0
+    - pandas >=1.0.0
     - python >=${{ python_min }}
     - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
