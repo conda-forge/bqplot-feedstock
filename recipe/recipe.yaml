@@ -32,6 +32,7 @@ requirements:
     - python >=${{ python_min }}
     - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
+    - bqscales >=0.3.3,<0.4
 
 tests:
   - python:
