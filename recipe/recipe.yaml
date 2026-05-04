@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.12.47"
+  version: "0.13.0"
 
 package:
   name: bqplot
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bqplot/bqplot-${{ version }}.tar.gz
-  sha256: d821c7d4be5effd31f0bd5d566511cfbff57fa083dd92f5c1c04acff11a42f6d
+  sha256: e0a6e44760a42ea3fa33fd42b6af53610b576265fb2fff01f880c28dba2dbffd
 
 build:
   number: 0
