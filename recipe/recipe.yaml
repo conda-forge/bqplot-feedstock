@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.12.45
+  version: "0.12.47"
 
 package:
   name: bqplot
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bqplot/bqplot-${{ version }}.tar.gz
-  sha256: ede00e9fdf7d92e43cc2d1b9691c7da176b6216fdd187c8e92f19d7beaca5e2a
+  sha256: d821c7d4be5effd31f0bd5d566511cfbff57fa083dd92f5c1c04acff11a42f6d
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
   run:
     - ipywidgets >=7.6.0,<9
     - numpy >=1.10.4
-    - pandas >=1.0.0,<3.0.0
+    - pandas >=1.0.0
     - python >=${{ python_min }}
     - traitlets >=4.3.0,<6.0
     - traittypes >=0.0.6
